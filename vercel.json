@@ -1,9 +1,17 @@
 {
-  "buildCommand": "npm run vercel-build",
-  "installCommand": "npm run vercel-install",
-  "outputDirectory": "dist",
   "framework": "vite",
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "env": {
-    "NODE_ENV": "production"
+    "VITE_SUPABASE_URL": "https://nvpknwtppuejrffaswlh.supabase.co",
+    "VITE_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im52cGtud3RwcHVlanJmZmFzd2xoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY1NzY0OTAsImV4cCI6MjA3MjE1MjQ5MH0.6acQrRjS5RUXOF9j3TqZ0ikj6oVzA71opR5gIa6NFsQ",
+    "VITE_BACKEND_URL": "https://event-manager-app-jade.vercel.app"
   }
 }

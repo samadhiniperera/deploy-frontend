@@ -7,12 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    
-    
-    "prebuild": "chmod +x node_modules/.bin/vite || true",
-    "vercel-build": "npm ci --no-audit && npm run build",
-    "vercel-install": "rm -rf node_modules package-lock.json && npm ci --no-audit"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.56.1",
